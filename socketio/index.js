@@ -16,3 +16,9 @@ exports.io = function(server) {
 exports.sendVibration = function(id) {
   io.sockets.emit('vibration', {'id': id});  
 }
+
+exports.sendAllVibration = function() {
+  io.sockets.emit('vibration', {'id': '1'});
+  io.sockets.emit('vibration', {'id': '2'});
+  io.sockets.emit('vibration', {'id': '3'});
+}
